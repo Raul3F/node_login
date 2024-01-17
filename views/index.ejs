@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title><title>Dashboard</title></title>
+ <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container" style="margin-top: 50px;">
+ <title>Home</title>
+</head>
+<body>
+ <h1>Welcome<%= user ? `, ${user.username}` : '' %>!</h1>
+ <% if (user) { %>
+ <p><a href="/manage-products">Manage Products</a></p>
+ <p><a href="/logout">Logout</a></p>
+ <% } else { %>
+ <p><a href="/login">Login</a></p>
+ <p><a href="/register">Register</a></p>
+ <% } %>
+</body>
+</html>
